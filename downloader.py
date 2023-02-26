@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 
 class Downloader():
     
-    def download(link, counter, name):
+    def download(link, counter, name, download_path='./videos/'):
         # Attempted Methods:
         #   requests    N
         #   urllib3     N
@@ -45,7 +45,9 @@ class Downloader():
 
         video_data = requests.get(f'{video_link}')
         
-        path = './videos/'
+        path = download_path
+
+
         # #CREATE DIRECTORY 
         total_path = path+f'{name}/'+'original/'
         if not os.path.exists(total_path):
@@ -136,28 +138,17 @@ class Downloader():
             if link.get('href') is None:
                 continue
             if(link.get('href').find(f'@{username}') != -1):
-                print(link.get('href'))
+                #print(link.get('href'))
                 links.append(link.get('href'))
                 counter += 1
 
-        print(f'TOTAL LINKS: {counter}')
+        print(f'{username} | TOTAL LINKS: {counter}')
         # --------------------------------------------------------------------------------
         # @links :: contains the 20-30 most recent videos of given user 
 
         return links
 
 
-if __name__ == "__main__":
-    name = "pokerllama"
-    links = Downloader.parser(name)
-    
-
-    counter = 1
-    for l in links:
-        Downloader.download(l, counter, name)
-        counter+=1
-
-        #break
 
     
 

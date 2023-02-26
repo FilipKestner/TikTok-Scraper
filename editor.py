@@ -19,7 +19,7 @@ from datetime import datetime
 
 
 
-class editor:
+class Editor:
     clip_dir = ''
     # @clip_dir :: PATH to directory we are going to be 
     #              traversing and editing every file in
@@ -159,16 +159,4 @@ class editor:
     def setSound(self, path):
         self.sound_path = path
         
-
-
-
-if __name__ == "__main__":
-    
-    tester = editor('./videos/pokerllama/original/','./videos/pokerllama/edited/','pokerllama')
-
-    paths = tester.getPaths()
-
-    tester.processX(10)
-
-    #print(Center.XCenter(f'{Fore.MAGENTA}testing'))
 

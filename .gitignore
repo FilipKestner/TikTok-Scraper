@@ -1,0 +1,7 @@
+
+videos/
+editor.py
+downloader.py
+.DS_Store
+*.pyc
+geckodriver.log
