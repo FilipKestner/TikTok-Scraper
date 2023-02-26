@@ -14,9 +14,6 @@ from time import sleep
 
 opts, args = getopt.getopt(sys.argv[1:],"d:",['dir'])
 
-print(opts)
-print(args)
-
 
 # Setting Download Directory
 download_dir = './videos/'
