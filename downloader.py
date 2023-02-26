@@ -33,7 +33,7 @@ class Downloader():
         querystring = {"url":f"{link}","hd":"0"}
 
         headers = {
-            "X-RapidAPI-Key": "7d58c4de90msh9eaa80c141cc63ep1514dejsnfdb0ef8759f6",
+            "X-RapidAPI-Key": "**INSERT YOUR OWN RAPIDAPI-KEY HERE**",
             "X-RapidAPI-Host": "tiktok-video-no-watermark2.p.rapidapi.com"
         }
 
