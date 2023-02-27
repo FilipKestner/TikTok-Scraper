@@ -6,7 +6,7 @@ and also edits them slightly.
 
 ## Usage
 ```python
-python 3 main.py -d directory/to/download/to @any @tiktok @account @name 
+python3 main.py -d directory/to/download/to @any @tiktok @account @name 
 ```
 
 If you wish to the use any code that may have been ommited 
